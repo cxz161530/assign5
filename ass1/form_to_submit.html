@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Form</title>
+    <link rel="stylesheet" href="./form_to_submit.css">
+
+  
+</head>
+
+<body>
+    
+    <div >
+        <h2>Subscription From</h2>
+    <form id="subscriptionForm"  >
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" >
+        <div id="firstName-error" class="error-message"></div>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" >
+        <div id="lastName-error" class="error-message"></div>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <div id="email-error" class="error-message"></div>
+
+        <label for="package">Package:</label>
+        <select id="package" class="form-input">
+            <option value="">--Please choose an option--</option>
+        </select>
+        <div id="package-error" class="package-message"></div>
+
+  
+
+            <label for="subscribe" style="display: inline;">
+                Subscribe to our newsletter
+            </label>
+            <input type="checkbox" id="subscribe" class="form-input" style="display: inline;" />
+          
+  
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result" class="result"></div>
+</div>
+<script src="form_to_submit.js" defer></script>
+
+</body>
+</html>

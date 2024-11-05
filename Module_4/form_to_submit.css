@@ -1,0 +1,76 @@
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Center the form on the page */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Style the form container */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Style input fields */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Style radio buttons and labels */
+input[type="radio"] {
+    margin-right: 6px;
+    display: inline;
+}
+
+/* Style the submit button */
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.error-message {
+    color:red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+input[type="radio"] {
+    margin-right: 6px;
+    display: inline;
+}
+
+label {
+    display: inline-block;
+    margin-right: 15px; /* Adjust spacing between radio buttons and labels */
+}

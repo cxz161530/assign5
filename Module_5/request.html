@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Data and Populate Table</title>
+</head>
+<body>
+
+<button onclick="fetchAndPopulateTable()">Fetch Data</button>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>Program/Major</th>
+      <th>Type</th>
+      <th>Year Conferred</th>
+    </tr>
+  </thead>
+  <tbody id="dataTableBody">
+    <!-- Table body will be populated dynamically -->
+  </tbody>
+</table>
+
+<script>
+function fetchAndPopulateTable() {
+  const apiUrl = 'https://imaginative-kulfi-dd988d.netlify.app/project.json';
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Call a function to populate the table with the fetched data
+      populateTable(data);
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+    });
+}
+
+function populateTable(data) {
+  // Get the table body element
+  const tableBody = document.getElementById('dataTableBody');
+
+  // Clear existing table rows
+  tableBody.innerHTML = '';
+
+  // Iterate over the data and add rows to the table
+  data.forEach(item => {
+    const row = document.createElement('tr');
+    const schoolCell = document.createElement('td');
+    const programCell = document.createElement('td');
+    const typeCell = document.createElement('td');
+    const yearCell = document.createElement('td');
+
+    // Add data to the cells
+    schoolCell.textContent = item.School;
+    programCell.textContent = item['Program/Major'];
+    typeCell.textContent = item.Type;
+    yearCell.textContent = item['Year conferred'];
+
+    // Append cells to the row
+    row.appendChild(schoolCell);
+    row.appendChild(programCell);
+    row.appendChild(typeCell);
+    row.appendChild(yearCell);
+
+    // Append row to the table body
+    tableBody.appendChild(row);
+  });
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

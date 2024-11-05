@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./Calculator.css">
+    <script src="./Javascript.js"></script>
+
+  
+</head>
+<body>
+    <script>
+        // 1. Welcome visitor with an alert
+        alert("Welcome!");
+
+        // 2. Ask visitor name
+        var visitorName = prompt("Please enter your name:");
+
+        // 3. Display the visitor name
+        alert("Welcome, " + visitorName + "!");
+
+        // 4. Ask visitor number enter and put them into an array
+        var numbersArray = [];
+        var input;
+
+        do {
+            input = prompt("Enter a list of numbers separated by space or comma (press cancel or enter to stop):");
+            if (input !== null && input.trim() !== "") {
+                var inputNumbers = input.split(/[ ,]+/);
+                numbersArray = numbersArray.concat(inputNumbers.map(Number));
+            }
+        } while (input !== null && input.trim() !== "");
+
+
+
+        // Calling the function with the initial array
+        processArray(numbersArray);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/*center the form in middle*/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* making the form style padding and shadow effect */
+form {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Creating space betweenlable and input box*/
+label {
+    margin-bottom: 8px;
+}
+
+/* Style input fields */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+
+
+/* Style the submit button */
+button {
+    background-color: #4caf50;
+    padding: 10px 15px;
+    border-radius: 4px;
+
+  
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.error-message {
+    color:red;
+    font-size: 14px;
+
+}
+
+/* make success message green*/
+input.success {
+    border: 1px solid green;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}

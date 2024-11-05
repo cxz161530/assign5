@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation and Submission</title>
+    <link rel="stylesheet" href="./form_to_submit.css">
+    <script src="./form_to_submit.js"></script>
+    
+
+  
+</head>
+
+<body>
+
+    <form id= "myForm" action="https://cs601.bu-course-examples.com/hw4/380a98f5-5191-496f-8aa1-7acc1da83cc5" method="post" onsubmit = "return FormValidation()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <div id="firstName-error" class="error-message"></div>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <div id="lastName-error" class="error-message"></div>
+
+        <label for="facilitator">Facilitator First Name:</label>
+        <input type="text" id="facilitator" name="facilitator" required>
+        <div id="facilitator-error" class="error-message"></div>
+
+        <label>Do you prefer to:</label>
+        <label><input type="radio" name="preference" value="early" required> Get up early</label>
+        <label><input type="radio" name="preference" value="late" required> Stay up late</label>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
